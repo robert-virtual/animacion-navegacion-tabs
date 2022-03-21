@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: #17a2b8;
+  overflow: hidden;
+}
+.wrapper {
+  background-color: #fff;
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px 30px 30px;
+  margin: 130px auto;
+  border-radius: 5px;
+}
+
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.wrapper nav {
+  position: relative;
+  height: 50px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper nav label {
+  z-index: 9999;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  color: #17a2b8;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.wrapper nav .slider {
+  position: absolute;
+  background-color: #17a2b8;
+  width: 20%;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+#home:checked ~ nav .home {
+  color: white;
+}
+
+#blog:checked ~ nav .slider {
+  left: 20%;
+}
+#blog:checked ~ nav .blog {
+  color: white;
+}
+
+#code:checked ~ nav .slider {
+  left: 40%;
+}
+#code:checked ~ nav .code {
+  color: white;
+}
+
+#help:checked ~ nav .slider {
+  left: 60%;
+}
+#help:checked ~ nav .help {
+  color: white;
+}
+
+#about:checked ~ nav .slider {
+  left: 80%;
+}
+#about:checked ~ nav .about {
+  color: white;
+}
